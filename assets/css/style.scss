@@ -1,0 +1,236 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Bible-like Typography */
+body {
+  font-family: 'Crimson Text', 'Georgia', 'Garamond', serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #1a1a1a;
+  background-color: #faf8f3;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Headers - Conservative and Classic */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Crimson Text', 'Georgia', serif;
+  font-weight: 600;
+  color: #2c2416;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  border-bottom: 3px double #8b7355;
+  padding-bottom: 0.5em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-top: 2.5em;
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+}
+
+h3 {
+  font-size: 1.4em;
+  font-style: italic;
+}
+
+/* Verse numbering style */
+ol {
+  list-style: none;
+  counter-reset: verse-counter;
+  padding-left: 0;
+  margin-left: 2em;
+}
+
+ol li {
+  counter-increment: verse-counter;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+ol li::before {
+  content: counter(verse-counter) ".";
+  position: absolute;
+  left: -2em;
+  font-weight: bold;
+  color: #8b7355;
+  font-size: 0.9em;
+}
+
+/* Links - Subtle and classic */
+a {
+  color: #5d4e37;
+  text-decoration: none;
+  border-bottom: 1px solid #c4a777;
+}
+
+a:hover {
+  color: #8b7355;
+  border-bottom-color: #8b7355;
+}
+
+/* Emphasis and styling for sacred text */
+em {
+  font-style: italic;
+  color: #3a3024;
+}
+
+strong {
+  font-weight: 600;
+  color: #2c2416;
+}
+
+/* Block quotes for special passages */
+blockquote {
+  border-left: 4px solid #8b7355;
+  margin: 2em 0;
+  padding: 1em 2em;
+  background-color: #f5f3ed;
+  font-style: italic;
+  color: #3a3024;
+}
+
+/* Horizontal rules - Classic dividers */
+hr {
+  border: none;
+  border-top: 2px solid #8b7355;
+  margin: 3em auto;
+  width: 50%;
+}
+
+/* Special styling for intro/footer text (italicized scriptures) */
+p:first-of-type em:only-child,
+p:last-of-type em:only-child {
+  display: block;
+  text-align: center;
+  font-size: 1.1em;
+  margin: 2em 0;
+  color: #5d4e37;
+}
+
+/* Page container */
+.site-header {
+  border-top: 5px solid #8b7355;
+  border-bottom: 2px solid #c4a777;
+  background-color: #f5f3ed;
+}
+
+.site-title {
+  font-family: 'Crimson Text', 'Georgia', serif;
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #2c2416 !important;
+}
+
+.site-footer {
+  border-top: 2px solid #c4a777;
+  background-color: #f5f3ed;
+  color: #5d4e37;
+  margin-top: 4em;
+  padding-top: 2em;
+}
+
+/* Content area */
+.page-content {
+  padding: 2em 0;
+}
+
+.post-content {
+  text-align: justify;
+}
+
+/* Navigation links - subtle and classic */
+.site-nav .page-link {
+  color: #5d4e37;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+
+.site-nav .page-link:hover {
+  color: #8b7355;
+}
+
+/* Table of Contents styling */
+.site-header + .page-content h2 a,
+.site-header + .page-content h3 a {
+  font-size: 1.2em;
+  display: block;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  background-color: #f5f3ed;
+  border: 1px solid #c4a777;
+  text-align: center;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+
+.site-header + .page-content h2 a:hover,
+.site-header + .page-content h3 a:hover {
+  background-color: #ebe9e0;
+  border-color: #8b7355;
+}
+
+/* Drop caps for chapter beginnings */
+.post-content > ol > li:first-child::first-letter,
+.post-content > p:first-of-type::first-letter {
+  float: left;
+  font-size: 3.5em;
+  line-height: 0.9;
+  margin: 0.1em 0.1em 0 0;
+  font-weight: bold;
+  color: #8b7355;
+}
+
+/* Print styles for a more book-like appearance */
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+  
+  .site-header,
+  .site-footer,
+  .site-nav {
+    display: none;
+  }
+  
+  h1 {
+    page-break-before: always;
+  }
+  
+  h2, h3 {
+    page-break-after: avoid;
+  }
+  
+  ol li {
+    page-break-inside: avoid;
+  }
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+  }
+}
