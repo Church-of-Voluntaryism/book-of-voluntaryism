@@ -4,6 +4,19 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 
+# Hugo output
+public/
+
+# Hugo generated resources
+resources/
+
+# Node.js build output (if used)
+node_modules/
+
+# Python virtual environments (if used)
+.venv/
+venv/
+
 # Ruby/Bundler
 vendor/
 .bundle/
