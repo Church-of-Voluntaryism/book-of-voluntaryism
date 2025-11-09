@@ -11,16 +11,16 @@ title: The Book of Voluntaryism
 
 ## Contents
 
-### [Book I: Genesis](genesis.md)
+### [Book I: Genesis](genesis.html)
 The creation story and foundation of voluntary principles
 
-### [Book II: Principles](principles.md)
+### [Book II: Principles](principles.html)
 The moral foundations and guiding principles
 
-### [Book III: Parables](parables.md)
+### [Book III: Parables](parables.html)
 Stories of wisdom and guidance
 
-### [Book IV: Proverbs](proverbs.md)
+### [Book IV: Proverbs](proverbs.html)
 Teachings for righteous living
 
 ---
