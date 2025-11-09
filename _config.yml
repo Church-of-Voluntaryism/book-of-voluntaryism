@@ -1,0 +1,54 @@
+title: The Book of Voluntaryism
+description: The Foundational Scripture of the Church of Voluntaryism
+baseurl: ""
+url: "https://church-of-voluntaryism.github.io"
+
+# Theme and appearance
+theme: minima
+minima:
+  skin: classic
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .gitignore
+  - LICENSE
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+
+# Custom variables for Bible-like styling
+book:
+  title: "The Book of Voluntaryism"
+  subtitle: "Sacred Texts of Voluntary Principles"
+  books:
+    - name: "Genesis"
+      file: "genesis"
+    - name: "Principles"
+      file: "principles"
+    - name: "Parables"
+      file: "parables"
+    - name: "Proverbs"
+      file: "proverbs"
